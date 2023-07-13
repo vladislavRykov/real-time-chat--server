@@ -15,20 +15,10 @@ const UserModel = Schema(
       type: String,
       required: true,
     },
-    avatar: String,
-    confirmed: {
-      type: Boolean,
-      default: false,
-    },
+    avatar: String | null,
+    confirm: Boolean,
     confirm_hash: String,
-    last_seen: {
-      type: Date,
-      default: new Date(),
-    },
-    isOnline: {
-      type: Boolean,
-      default: false,
-    },
+    last_seen: Date,
   },
   {
     timestamps: true,
